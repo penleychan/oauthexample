@@ -8,18 +8,22 @@ import { ProtectedComponent } from './protected/protected.component';
 import {AuthGuardService} from './services/auth-guard.service';
 import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
 import {AuthModule} from './shared/auth/auth.module';
+import { CallApiComponent } from './call-api/call-api.component';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProtectedComponent,
-    AuthCallbackComponent
+    AuthCallbackComponent,
+    CallApiComponent
   ],
   imports: [
     AuthModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     AuthGuardService

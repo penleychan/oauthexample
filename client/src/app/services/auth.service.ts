@@ -37,7 +37,7 @@ export class AuthService {
 
 export function getClientSettings(): UserManagerSettings {
   const userManagerSettings: UserManagerSettings = {};
-  userManagerSettings.authority = 'http://localhost:5000/';
+  userManagerSettings.authority = 'http://localhost:5000/identity';
   userManagerSettings.client_id = 'angular_spa';
   userManagerSettings.redirect_uri = 'http://localhost:4200/auth-callback';
   userManagerSettings.post_logout_redirect_uri = 'http://localhost:4200';
